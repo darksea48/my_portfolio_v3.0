@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="btn btn-primary d-md-none position-fixed top-0 start-0 m-3" style="z-index: 1001;" id="menuToggle">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <div class="container-fluid p-0">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar">👨‍💻</div>
+                <h1 id="sidebarName">Tu Nombre</h1>
+                <p id="sidebarTagline">Desarrollador Full Stack</p>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#" class="nav-link active" data-page="home">
+                            <i class="bi bi-house-door"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" class="nav-link" data-page="blog">
+                            <i class="bi bi-journal-text"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li> La vamos a reemplazar por certificaciones a posteriori -->
+                    <li>
+                        <a href="#" class="nav-link" data-page="projects">
+                            <i class="bi bi-briefcase"></i>
+                            <span>Proyectos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="resume">
+                            <i class="bi bi-file-person"></i>
+                            <span>Resumen</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="contact">
+                            <i class="bi bi-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn btn-outline-primary theme-toggle w-100" id="themeToggle">
+                    <i class="bi bi-moon-stars"></i> Modo Oscuro
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <div class="page active" id="home">
+                <div class="hero">
+                    <h1 class="display-3 fw-bold">Bienvenido a Mi Portafolio</h1>
+                    <p class="lead">Soy un joven informático trabajador y titulado como <span>Técnico en Programación Computacional</span>. Tengo ciertas aptitudes en el área administrativa, como junior o administrativo, y de cajero, pero ahora centrado en el área de la informática. Estoy ejerciendo mis conocimientos en programación, análisis computacional, informática, soporte técnico computacional y conocimientos muy básicos en diseño gráfico. He trabajado en las áreas de soporte, desarrollo y telecomunicaciones en el rubro informático.</p>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-link" title="Contacto">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+
+                    <div class="mt-5">
+                        <button class="btn btn-primary btn-lg me-2" onclick="navigateTo('projects')">
+                            <i class="bi bi-briefcase me-2"></i>Ver Proyectos
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg" onclick="navigateTo('contact')">
+                            <i class="bi bi-envelope me-2"></i>Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Page -->
+            <div class="page" id="blog">
+                <div class="page-header">
+                    <h2><i class="bi bi-journal-text me-3"></i>Blog</h2>
+                    <p>Artículos y pensamientos sobre desarrollo web</p>
+                </div>
+                <div class="row g-4" id="blogGrid">
+                    <div class="col-12 loading">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Page -->
+            <div class="page" id="projects">
+                <div class="page-header">
+                    <h2><i class="bi bi-briefcase me-3"></i>Proyectos</h2>
+                    <p>Una selección de mis trabajos más recientes</p>
+                </div>
+                <div class="row g-4" id="projectsGrid">
+                    <div class="col-12 loading">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Page -->
+            <div class="page" id="resume">
+                <div class="page-header">
+                    <h2><i class="bi bi-file-person me-3"></i>Resumen</h2>
+                    <p>Mi experiencia profesional y formación académica</p>
+                </div>
+                <div id="resumeContent">
+                    <div class="loading">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Page -->
+            <div class="page" id="contact">
+                <div class="page-header">
+                    <h2><i class="bi bi-envelope me-3"></i>Contacto</h2>
+                    <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <form id="contactForm">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Asunto</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-send me-2"></i>Enviar Mensaje
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Blog/Project Details -->
+    <div class="modal fade" id="detailModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-footer" id="modalFooter">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
