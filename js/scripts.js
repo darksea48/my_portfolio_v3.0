@@ -49,6 +49,34 @@ const portfolioData = {
     ],
     projects: [
         {
+            title: `Gestor de Productos - Sistema de Inventario Django`,
+            img: "img/img-gestortareasdjango.png",
+            date: "2025",
+            details: `Un sistema completo de gestión de productos desarrollado con Django y MySQL, que incluye funcionalidades CRUD, búsqueda avanzada, relaciones entre modelos y una interfaz de usuario moderna y responsive. Permite a los usuarios administrar productos, categorías y proveedores de manera eficiente, con validaciones de datos y manejo de errores robusto. El proyecto demuestra habilidades en desarrollo web full-stack, diseño de bases de datos y buenas prácticas de desarrollo con Django.`,
+            links: [
+                {
+                    url: `https://github.com/darksea48/M7_EvalMod_GestorProductos.git`,
+                    text: `Código`,
+                    class: `btn btn-primary btn-sm me-2`
+                }
+            ],
+            techs: ["Django", "Python", "MySQL", "HTML", "CSS", "JavaScript"]
+        },
+        {
+            title: `Sistema Cinepedia - Gestión de Películas y Usuarios`,
+            img: "img/img-inventario.png",
+            date: "2025",
+            details: `Plataforma web para gestión y reseña de películas - Sistema completo de gestión de contenido cinematográfico con funcionalidades de publicación, comentarios y administración de usuarios. Desarrollado con Django y MySQL, permite a los usuarios explorar una amplia base de datos de películas, agregar reseñas y calificaciones, y a los administradores gestionar el contenido de películas de manera eficiente.`,
+            links: [
+                {
+                    url: `https://github.com/darksea48/proyecto_cinepedia_mod7.git`,
+                    text: `Código`,
+                    class: `btn btn-primary btn-sm me-2`
+                }
+            ],
+            techs: ["Django", "Python", "MySQL", "HTML", "CSS", "JavaScript"]
+        },
+        {
             title: `Sistema de gestor de tareas`,
             img: "img/img-gestortareasdjango.png",
             date: "2025",
@@ -467,7 +495,7 @@ function showDetailModal(item, type) {
 
 // Theme functions
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     $('html').attr('data-theme', savedTheme);
     updateThemeButton(savedTheme);
 }
