@@ -76,7 +76,6 @@ body {
     border-radius: 50%;
 }
 
-
 .avatar:hover {
     transform: scale(1.05) rotate(5deg);
 }
