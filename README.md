@@ -20,7 +20,7 @@ Actualmente, estoy enfocado en el ecosistema de [Menciona la tecnología princip
 | **🌐 Demo en Vivo** | **[Visita mi Portafolio Web](https://darksea48.github.io/my_portfolio_v3.0/)** (GitHub Pages) |
 | **🎥 Video Presentación** | **[Ver Tutorial Técnico en YouTube]( https://www.youtube.com/watch?v=aAfbLoM-g0Q )** (Requisito de la AE) |
 | **🎨 Perfil Behance** | **[Ver Proyectos UX/UI]( https://www.youtube.com/watch?v=zGb-80DfYdY )** (Requisito de la AE) |
-| **📧 Contacto** | [Tu Email] |
+| **📧 Contacto** | [d.suarez.zamorano@gmail.com] |
 | **💼 LinkedIn** | https://www.linkedin.com/help/linkedin/answer/a564064/tu-perfil-en-linkedin?lang=es |
 
 ---
