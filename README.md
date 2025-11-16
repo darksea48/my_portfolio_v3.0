@@ -5,11 +5,11 @@
 
 ## 👋 ¡Hola! Soy [Tu Nombre]
 
-Soy un desarrollador [Rol Principal, ej: Full Stack, Front-end, Back-end] con una pasión por [Menciona algo específico, ej: crear interfaces de usuario accesibles, la optimización de bases de datos, el desarrollo móvil].
+Soy un desarrollador Full Stack en desarrollo, con una pasión por crear interfaces de usuario accesibles, la optimización de bases de datos.
 
-Actualmente, estoy enfocado en el ecosistema de [Python y Django].
+Actualmente, estoy enfocado en el ecosistema de Python y Django.
 
-> **Mi objetivo profesional:** [Aplicar mis conocimientos en un entorno colaborativo que me permita crecer como desarrollador y entregar soluciones de alto impacto.]
+> **Mi objetivo profesional:** Aplicar mis conocimientos en un entorno colaborativo que me permita crecer como desarrollador y entregar soluciones de alto impacto.
 
 ---
 
