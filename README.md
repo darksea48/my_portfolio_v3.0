@@ -7,9 +7,9 @@
 
 Soy un desarrollador [Rol Principal, ej: Full Stack, Front-end, Back-end] con una pasión por [Menciona algo específico, ej: crear interfaces de usuario accesibles, la optimización de bases de datos, el desarrollo móvil].
 
-Actualmente, estoy enfocado en el ecosistema de [Menciona la tecnología principal de tu interés, ej: React y Node.js, Python y Django, o Figma y UX/UI].
+Actualmente, estoy enfocado en el ecosistema de [Python y Django].
 
-> **Mi objetivo profesional:** [Escribe una frase sobre lo que buscas o esperas de tu carrera, ej: "Aplicar mis conocimientos en un entorno colaborativo que me permita crecer como desarrollador y entregar soluciones de alto impacto."]
+> **Mi objetivo profesional:** [Aplicar mis conocimientos en un entorno colaborativo que me permita crecer como desarrollador y entregar soluciones de alto impacto.]
 
 ---
 
@@ -33,17 +33,13 @@ Esta es la lista de herramientas con las que me siento cómodo trabajando. (Pued
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ### Back-end & Bases de Datos
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![MySQL](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ### Herramientas y Otros
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
 ---
 
 ## 💻 Proyectos Destacados
