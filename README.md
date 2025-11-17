@@ -1,6 +1,6 @@
 # 🚀 Mi Portafolio Técnico
 <p align="center">
-  <img src="https://via.placeholder.com/800x200?text=Banner+o+Imagen+Llamativa+de+tu+Portafolio" alt="Banner de Portafolio">
+  <img src="img/image.png" alt="Banner de Portafolio">
 </p>
 
 ## 👋 ¡Hola! Soy [Tu Nombre]
