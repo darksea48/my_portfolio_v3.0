@@ -264,7 +264,6 @@ $(document).ready(function() {
 
     // Theme toggle
     initTheme();
-    $('#themeToggle').on('click', toggleTheme);
 
     // Contact form
     $('#contactForm').on('submit', function(e) {
@@ -495,27 +494,7 @@ function showDetailModal(item, type) {
 
 // Theme functions
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    $('html').attr('data-theme', savedTheme);
-    updateThemeButton(savedTheme);
-}
-
-function toggleTheme() {
-    const currentTheme = $('html').attr('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    $('html').attr('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeButton(newTheme);
-}
-
-function updateThemeButton(theme) {
-    const $btn = $('#themeToggle');
-    if (theme === 'dark') {
-        $btn.html('<i class="bi bi-sun-fill"></i> Modo Claro');
-    } else {
-        $btn.html('<i class="bi bi-moon-stars"></i> Modo Oscuro');
-    }
+    $('html').attr('data-theme', 'dark');
 }
 
 // Contact form handler

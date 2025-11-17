@@ -7,18 +7,6 @@
 
 /* CSS Variables for Theming */
 :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --accent: #4f86f7;
-    --accent-hover: #3a6fd9;
-    --border: #e0e0e0;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --sidebar-width: 350px;
-}
-
-[data-theme="dark"] {
     --bg-primary: #1a1a1a;
     --bg-secondary: #252525;
     --text-primary: #e0e0e0;
@@ -27,7 +15,10 @@
     --accent-hover: #4285f4;
     --border: #404040;
     --shadow: rgba(0, 0, 0, 0.3);
+    --sidebar-width: 350px;
 }
+
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -352,26 +343,23 @@ body {
 }
 
 /* Dark theme for Bootstrap components */
-[data-theme="dark"] .card {
-    background: var(--bg-secondary);
-}
 
-[data-theme="dark"] .btn-outline-primary {
+.btn-outline-primary {
     color: var(--accent);
     border-color: var(--accent);
 }
 
-[data-theme="dark"] .btn-outline-primary:hover {
+.btn-outline-primary:hover {
     background: var(--accent);
     border-color: var(--accent);
 }
 
-[data-theme="dark"] .modal-content {
+.modal-content {
     background: var(--bg-secondary);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .modal-header {
+.modal-header {
     border-bottom-color: var(--border);
 }
 
