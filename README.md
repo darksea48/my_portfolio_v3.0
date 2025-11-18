@@ -19,7 +19,6 @@ Actualmente, estoy enfocado en el ecosistema de Python y Django, pero con intenc
 | :--- | :--- |
 | **🌐 Demo en Vivo** | **[Visita mi Portafolio Web](https://darksea48.github.io/my_portfolio_v3.0/)** (Sitio de mi portafolio) |
 | **🎥 Video Presentación** | **[Ver Tutorial Técnico en YouTube]( https://www.youtube.com/watch?v=aAfbLoM-g0Q )** (Requisito de la AE) |
-| **🎨 Perfil Behance** | **[Ver Proyectos UX/UI]( https://www.youtube.com/watch?v=zGb-80DfYdY )** (Requisito de la AE) |
 | **📧 Contacto** | [d.suarez.zamorano@gmail.com](mailto:d.suarez.zamorano@gmail.com) |
 | **💼 LinkedIn** | [Perfíl LinkedIn: Douglas Suárez Zamorano](https://www.linkedin.com/in/douglas-suarez-zamorano/) |
 
@@ -47,9 +46,9 @@ Aquí puedes ver algunos de mis trabajos más relevantes. Recuerda que cada proy
 
 | Proyecto | Descripción Breve | Tecnologías Principales | Demo | Código Fuente |
 | :--- | :--- | :--- | :--- | :--- |
-| **[Nombre del Proyecto 1]** | [App para gestionar tareas, e-commerce simple, etc.] | React, Node.js, MongoDB | [Demo URL] | [Repo URL] |
-| **[Nombre del Proyecto 2]** | [Diseño de una aplicación de clima con un enfoque móvil.] | HTML, CSS (Grid), JavaScript | [Demo URL] | [Repo URL] |
-| **[Nombre del Proyecto 3]** | [Backend de API REST para autenticación de usuarios.] | Python (Flask), PostgreSQL | [Demo URL (ej: Render)] | [Repo URL] |
+| **Proyecto Mi Itaka** | App de gestión de restaurante | Django, MySQL(PostgreSQL), Bootstrap | [Demo URL] | [Repo URL](https://github.com/darksea48/proyecto_miitaka) |
+| **Photobook Básico de mis gatos** | Sitio web front-end con un carrusel y fotos de mis gatos | HTML, CSS, JavaScript | [Demo URL](https://my-first-photobook.vercel.app/) | [Repo URL](https://github.com/darksea48/my-first-photobook) |
+| **Sitio Web Front End Ciberseguridad** | Sitio web front-end educativo en temas de ciberseguridad | HTML, CSS, JavaScript | [Demo URL](https://m2-evaluacion-modulo.vercel.app/) | [Repo URL](https://github.com/darksea48/M2-Evaluacion-Modulo) |
 
 ---
 
