@@ -49,6 +49,20 @@ const portfolioData = {
     ],
     projects: [
         {
+            title: `Gestor de Restaurante Mi Itaka`,
+            img: "img/img-restobaritaka.jpg",
+            date: `2025`,
+            details: `Sistema de gestión integral para un restaurante, desarrollado con Django y MySQL (también adaptado para PostgreSQL, debido a la compatibilidad del ORM de Django). Incluye funcionalidades para la administración de menús, reservas y pedidos. El proyecto está diseñado para optimizar las operaciones diarias del restaurante, como el manejo de pedidos y facilitar la gestión administrativa. Próximamente se incorporarán más detalles y funcionalidades, como la integración de los módulos de caja, donde podrán sacarse los vouchers de los pedidos y también el gestión de inventario en cocina y barra.`,
+            links: [
+                {
+                    url: `https://github.com/darksea48/proyecto_miitaka.git`,
+                    text: `Código`,
+                    class: `btn  btn-primary btn-sm me-2`
+                },
+            ],
+            techs: ["Django", "Python", "MySQL", "PostgreSQL", "HTML", "CSS", "JavaScript"]
+        },
+        {
             title: `Gestor de Productos - Sistema de Inventario Django`,
             img: "img/gestion-prod.avif",
             date: "2025",
@@ -80,7 +94,7 @@ const portfolioData = {
             title: `Sistema de gestor de tareas`,
             img: "img/img-gestortareasdjango.png",
             date: "2025",
-            details: `Desarrollé una aplicación web de gestión de tareas utilizando Django y Python. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, con funcionalidades adicionales como marcar tareas como completadas y filtrarlas por estado. Implementé autenticación de usuarios para que cada usuario pueda gestionar sus propias tareas de manera segura. El proyecto demuestra habilidades en desarrollo web full-stack, manejo de bases de datos y buenas prácticas de desarrollo con Django.`,
+            details: `Desarrollé una aplicación web de gestión de tareas utilizando Django y Python. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, con funcionalidades adicionales como marcar tareas como completadas y filtrarlas por estado (no cuenta con persistencia de datos por el momento, debido a que así fue solicitado ). Implementé autenticación de usuarios para que cada usuario pueda gestionar sus propias tareas de manera segura. El proyecto demuestra habilidades en desarrollo web full-stack, manejo de bases de datos y buenas prácticas de desarrollo con Django.`,
             links: [
                 {
                     url: `https://github.com/darksea48/DB-inventario-MOD5.git`,
@@ -155,7 +169,7 @@ const portfolioData = {
             title: "Photobook Personal Mis Gatos",
             img: "img/screenshot-photobook.png",
             date: "2025",
-            details: `Desarrollé un sitio web personal como vitrina digital (photobook) con una galería de imágenes de mis gatos, seleccionadas y organizadas para explorar fácilmente. El diseño es limpio y funcional, centrado en lo visual, y el proyecto refleja experimentación con tecnologías web modernas, buenas prácticas de maquetación y una UX fluida.`,
+            details: `Pensados en ustedes dos: Champiñon y Oreo. Desarrollé un sitio web personal como vitrina digital (photobook) con una galería de imágenes de mis gatos, seleccionadas y organizadas para explorar fácilmente. El diseño es limpio y funcional, centrado en lo visual, y el proyecto refleja experimentación con tecnologías web modernas, buenas prácticas de maquetación y una UX fluida.`,
             links: [
                 {
                     url: `https://github.com/darksea48/my-first-photobook.git`,
@@ -169,20 +183,6 @@ const portfolioData = {
                 }
             ],
             techs: ["HTML", "CSS", "JavaScript"]
-        },
-        {
-            title: `Landing Page Restobar Itaka <span class="fsi-italic">(en desarrollo)</span>`,
-            img: "img/img-restobaritaka.jpg",
-            date: `<span class="fst-italic">En desarrollo</span>`,
-            details: `Desarrollaré una landing page de alto impacto para el restaurante Itaka, enfocada en conversión, con diseño responsive y UI/UX optimizados. Presentará el concepto gastronómico, identidad visual y una llamada a la acción clara para reservas o contacto, ofreciendo una navegación fluida que motive a visitar o reservar.`,
-            links: [
-                {
-                    url: `javascript:void(0)`,
-                    text: `Próximamente`,
-                    class: `btn btn-outline-light btn-sm`
-                }
-            ],
-            techs: "TBD"
         },
     ],
     resume: {
@@ -481,8 +481,8 @@ function showDetailModal(item, type) {
             
         `;
         footerHtml = `
-            ${linksHtml}
-            <button type="button" class="btn btn-secondary btn-sm ms-4" data-bs-dismiss="modal">Cerrar</button>
+            <div class="d-flex justify-content-center me-auto">${linksHtml}</div>
+            <div class="d-flex justify-content-center ms-auto"><button type="button" class="btn btn-secondary btn-sm ms-4" data-bs-dismiss="modal">Cerrar</button></div>
         `;
         
     }
