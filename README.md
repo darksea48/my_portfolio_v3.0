@@ -17,7 +17,6 @@ Actualmente, estoy enfocado en el ecosistema de Python y Django, pero con intenc
 | Enlace | Descripción |
 | :--- | :--- |
 | **🌐 Demo en Vivo** | **[Visita mi Portafolio Web](https://darksea48.github.io/my_portfolio_v3.0/)** (Sitio de mi portafolio) |
-| **🎥 Video Presentación** | **[Ver Tutorial Técnico en YouTube]( https://www.youtube.com/watch?v=aAfbLoM-g0Q )** (Requisito de la AE) |
 | **📧 Contacto** | [d.suarez.zamorano@gmail.com](mailto:d.suarez.zamorano@gmail.com) |
 | **💼 LinkedIn** | [Perfíl LinkedIn: Douglas Suárez Zamorano](https://www.linkedin.com/in/douglas-suarez-zamorano/) |
 
