@@ -57,8 +57,13 @@ const portfolioData = {
                 {
                     url: `https://github.com/darksea48/proyecto_miitaka.git`,
                     text: `Código`,
-                    class: `btn  btn-primary btn-sm me-2`
+                    class: `btn btn-primary btn-sm me-2`
                 },
+                {
+                    url: `https://proyecto-miitaka.onrender.com/`,
+                    text: `Demo`,
+                    class: `btn btn-outline-light btn-sm`
+                }
             ],
             techs: ["Django", "Python", "MySQL", "PostgreSQL", "HTML", "CSS", "JavaScript"]
         },
@@ -86,6 +91,11 @@ const portfolioData = {
                     url: `https://github.com/darksea48/proyecto_cinepedia_mod7.git`,
                     text: `Código`,
                     class: `btn btn-primary btn-sm me-2`
+                },
+                {
+                    url: `https://cinepedia-2pio.onrender.com/`,
+                    text: `Demo`,
+                    class: `btn btn-outline-light btn-sm`
                 }
             ],
             techs: ["Django", "Python", "MySQL", "HTML", "CSS", "JavaScript"]
