@@ -1,7 +1,6 @@
 # 🚀 Mi Portafolio Técnico
-<p align="center">
-  <img src="img/image.png" alt="Banner de Portafolio">
-</p>
+
+![Portafolio Banner](img/image.png)
 
 ## 👋 ¡Hola! Soy Douglas Suárez Zamorano
 
