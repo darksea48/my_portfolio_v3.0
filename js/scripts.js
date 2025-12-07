@@ -276,9 +276,22 @@ $(document).ready(function() {
     initTheme();
 
     // Contact form
-    $('#contactForm').on('submit', function(e) {
+    $('form[action="https://api.web3forms.com/submit"]').on('submit', function(e) {
         e.preventDefault();
-        handleContactSubmit();
+        
+        // Validar reCAPTCHA
+        const recaptchaResponse = grecaptcha.getResponse();
+        
+        if (recaptchaResponse.length === 0) {
+            alert('Por favor, completa el CAPTCHA antes de enviar el formulario.');
+            return false;
+        }
+        
+        // Agregar la respuesta del reCAPTCHA al campo oculto
+        $('#recaptchaResponse').val(recaptchaResponse);
+        
+        // Enviar el formulario
+        handleContactSubmit(this);
     });
 
     // Smooth scroll for internal links
@@ -508,40 +521,60 @@ function initTheme() {
 }
 
 // Contact form handler
-function handleContactSubmit() {
-    const name = $('#name').val();
-    const email = $('#email').val();
-    const subject = $('#subject').val();
-    const message = $('#message').val();
-
-    // Simulate sending (en producción aquí irías a tu backend)
-    const $form = $('#contactForm');
+function handleContactSubmit(form) {
+    const $form = $(form);
     const $btn = $form.find('button[type="submit"]');
     
     $btn.prop('disabled', true).html('<i class="bi bi-hourglass-split me-2"></i>Enviando...');
 
-    setTimeout(() => {
-        $btn.prop('disabled', false).html('<i class="bi bi-check-circle me-2"></i>¡Mensaje Enviado!');
-        $btn.removeClass('btn-primary').addClass('btn-success');
+    // Enviar el formulario de manera nativa
+    $.ajax({
+        url: $form.attr('action'),
+        method: 'POST',
+        data: $form.serialize(),
+        dataType: 'json',
+        success: function(response) {
+            $btn.prop('disabled', false).html('<i class="bi bi-check-circle me-2"></i>¡Mensaje Enviado!');
+            $btn.removeClass('btn-primary').addClass('btn-success');
 
-        // Show success alert
-        const alert = `
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <i class="bi bi-check-circle-fill me-2"></i>
-                <strong>¡Gracias ${name}!</strong> Tu mensaje ha sido enviado exitosamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-        `;
-        $(alert).insertBefore($form).hide().slideDown();
+            // Show success alert
+            const alert = `
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    <strong>¡Gracias!</strong> Tu mensaje ha sido enviado exitosamente.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            $(alert).insertBefore($form).hide().slideDown();
 
-        // Reset form
-        $form[0].reset();
+            // Reset form and reCAPTCHA
+            $form[0].reset();
+            grecaptcha.reset();
 
-        setTimeout(() => {
-            $btn.html('<i class="bi bi-send me-2"></i>Enviar Mensaje');
-            $btn.removeClass('btn-success').addClass('btn-primary');
-        }, 3000);
-    }, 1500);
+            setTimeout(() => {
+                $btn.html('<i class="bi bi-send me-2"></i>Enviar Mensaje');
+                $btn.removeClass('btn-success').addClass('btn-primary');
+            }, 3000);
+        },
+        error: function() {
+            $btn.prop('disabled', false).html('<i class="bi bi-x-circle me-2"></i>Error al Enviar');
+            $btn.removeClass('btn-primary').addClass('btn-danger');
+
+            const alert = `
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="bi bi-x-circle-fill me-2"></i>
+                    <strong>Error:</strong> No se pudo enviar el mensaje. Inténtalo de nuevo.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            $(alert).insertBefore($form).hide().slideDown();
+
+            setTimeout(() => {
+                $btn.html('<i class="bi bi-send me-2"></i>Enviar Mensaje');
+                $btn.removeClass('btn-danger').addClass('btn-primary');
+            }, 3000);
+        }
+    });
 }
 
 // Download resume (simulado)
