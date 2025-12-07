@@ -12,8 +12,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 </head>
 <body>
     <!-- Mobile Menu Button -->
@@ -179,10 +177,16 @@
                                         <label for="message" class="form-label">Mensaje</label>
                                         <textarea class="form-control" id="message" rows="5" name="message" required></textarea>
                                     </div>
-                                    <div class="mb-3 d-flex justify-content-center">
-                                        <div class="g-recaptcha" data-sitekey="6LczRSQsAAAAAIM_w14kEpTmrs8XPb17PkXmEwXe"></div>
+                                    
+                                    <!-- CAPTCHA Interno Simple -->
+                                    <div class="mb-3">
+                                        <label for="captcha" class="form-label">
+                                            Verificación de Seguridad: <span id="captchaQuestion"></span>
+                                        </label>
+                                        <input type="number" class="form-control" id="captcha" placeholder="Ingresa el resultado" required>
+                                        <small class="form-text text-muted">Resuelve la operación matemática para verificar que no eres un robot</small>
                                     </div>
-                                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                    
                                     <button type="submit" class="btn btn-primary btn-lg w-100">
                                         <i class="bi bi-send me-2"></i>Enviar Mensaje
                                     </button>
@@ -215,7 +219,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom JS -->
     <script src="js/scripts.js"></script>
+
 </body>
 </html>

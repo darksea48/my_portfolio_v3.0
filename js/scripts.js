@@ -246,12 +246,16 @@ const portfolioData = {
     }
 };
 
+// Variables globales para CAPTCHA
+let captchaNum1, captchaNum2, captchaAnswer;
+
 $(document).ready(function() {
     // Initialize
     loadProfile();
     rendercertifications();
     renderProjects();
     renderResume();
+    generateCaptcha();
 
     // Navigation
     $('.nav-link').on('click', function(e) {
@@ -279,16 +283,19 @@ $(document).ready(function() {
     $('form[action="https://api.web3forms.com/submit"]').on('submit', function(e) {
         e.preventDefault();
         
-        // Validar reCAPTCHA
-        const recaptchaResponse = grecaptcha.getResponse();
+        // Validar CAPTCHA interno
+        const userAnswer = parseInt($('#captcha').val());
         
-        if (recaptchaResponse.length === 0) {
-            alert('Por favor, completa el CAPTCHA antes de enviar el formulario.');
+        if (isNaN(userAnswer) || userAnswer !== captchaAnswer) {
+            swal.fire({
+                icon: 'error',
+                title: 'Error de Verificación',
+                text: 'La respuesta del CAPTCHA es incorrecta. Por favor, inténtalo de nuevo.'
+            });
+            generateCaptcha(); // Generar nuevo CAPTCHA
+            $('#captcha').val('').focus();
             return false;
         }
-        
-        // Agregar la respuesta del reCAPTCHA al campo oculto
-        $('#recaptchaResponse').val(recaptchaResponse);
         
         // Enviar el formulario
         handleContactSubmit(this);
@@ -547,9 +554,9 @@ function handleContactSubmit(form) {
             `;
             $(alert).insertBefore($form).hide().slideDown();
 
-            // Reset form and reCAPTCHA
+            // Reset form y generar nuevo CAPTCHA
             $form[0].reset();
-            grecaptcha.reset();
+            generateCaptcha();
 
             setTimeout(() => {
                 $btn.html('<i class="bi bi-send me-2"></i>Enviar Mensaje');
@@ -575,6 +582,32 @@ function handleContactSubmit(form) {
             }, 3000);
         }
     });
+}
+
+// Generar CAPTCHA matemático
+function generateCaptcha() {
+    // Generar dos números aleatorios entre 1 y 10
+    captchaNum1 = Math.floor(Math.random() * 10) + 1;
+    captchaNum2 = Math.floor(Math.random() * 10) + 1;
+    
+    // Elegir operación aleatoria (suma o resta)
+    const operations = ['+', '-'];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    
+    // Calcular respuesta
+    if (operation === '+') {
+        captchaAnswer = captchaNum1 + captchaNum2;
+    } else {
+        // Asegurar que el resultado no sea negativo
+        if (captchaNum1 < captchaNum2) {
+            [captchaNum1, captchaNum2] = [captchaNum2, captchaNum1];
+        }
+        captchaAnswer = captchaNum1 - captchaNum2;
+    }
+    
+    // Mostrar pregunta
+    $('#captchaQuestion').html(`<strong>¿Cuánto es ${captchaNum1} ${operation} ${captchaNum2}?</strong>`);
+    $('#captcha').val('');
 }
 
 // Download resume (simulado)
